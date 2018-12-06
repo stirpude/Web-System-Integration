@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <link rel="icon" href="../../../../favicon.ico"/>
+
+
+        <title>Add new Owner</title>
+
+        <!-- Bootstrap core CSS -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+
+
+        <!-- Custom styles for this template -->
+
+        <h:outputStylesheet library="css" name="custom_lab7.css"/>
+    </h:head>
+    
+        
+            <h:form>
+               
+                
+                    <h:panelGroup layout="block" class="form-group">
+
+
+                    <h1 class="h3 mb-3 font-weight-normal">Add New Owner</h1>
+                    
+                    </h:panelGroup>
+               
+
+                <h:panelGroup layout="block" class="form-group">
+                    <h:outputLabel value="Name" for="name"/>
+                <h:inputText value="#{ownerController.owner.name}" class="form-control" id="name"/>
+                    
+                </h:panelGroup>
+
+                <h:panelGroup layout="block" class="form-group">
+                    
+                    <h:outputLabel value="Email" for="email"/>
+                    <input jsf:value ="#{ownerController.owner.email}" type="email" id="email" class="form-control" name="email"/>
+                    
+                </h:panelGroup>
+
+
+
+                <h:panelGroup layout="block" class="form-group">
+                    
+                    <h:outputLabel value="Date Joined" for="joineddate"/>
+                    <h:inputText value="#{ownerController.owner.dateJoined}" class="form-control" p:type="date" id="joineddate">
+                        <f:convertDateTime pattern="yyyy-MM-dd"/>
+                        </h:inputText>
+                </h:panelGroup>
+
+
+                
+                <h:commandButton value="Add New Owner" class="btn btn-primary" action="#{ownerController.executeSaveOwner()}" />
+
+      
+       </h:form>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    
+    
+</html>
+
